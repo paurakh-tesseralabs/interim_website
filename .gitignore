@@ -1,1 +1,10 @@
 Success_1/
+
+node_modules/
+dist/
+.sanity/
+.env
+.env.*
+!.env.example
+.DS_Store
+work/

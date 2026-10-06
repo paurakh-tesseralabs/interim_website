@@ -1,0 +1,31 @@
+{
+  "name": "tessera-website",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "studio"
+  ],
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "studio": "npm run dev --workspace studio",
+    "studio:build": "npm run build --workspace studio",
+    "build": "tsx scripts/build-site.ts",
+    "build:local": "tsx scripts/build-site.ts --local",
+    "preview": "http-server dist -a 127.0.0.1 -p 8080 -c-1",
+    "import:check": "tsx scripts/import-blog.ts",
+    "import:blog": "cd studio && sanity exec ../scripts/import-blog.ts --with-user-token -- --write",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "devDependencies": {
+    "@portabletext/block-tools": "6.0.3",
+    "@portabletext/to-html": "6.0.0",
+    "@sanity/client": "8.9.0",
+    "@sanity/image-url": "2.1.1",
+    "http-server": "14.1.1",
+    "jsdom": "30.1.2",
+    "tsx": "4.23.15",
+    "sanity": "6.17.0"
+  }
+}

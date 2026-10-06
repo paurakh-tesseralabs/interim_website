@@ -1,0 +1,23 @@
+{
+  "name": "tessera-blog-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev --host localhost",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "schema:deploy": "sanity schema deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "sanity": "6.17.0",
+    "@sanity/icons": "^5.2.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/react": "^19.2.0"
+  }
+}
